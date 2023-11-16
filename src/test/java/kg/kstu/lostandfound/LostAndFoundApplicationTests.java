@@ -1,4 +1,4 @@
-package com.example.lostandfound;
+package kg.kstu.lostandfound;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
