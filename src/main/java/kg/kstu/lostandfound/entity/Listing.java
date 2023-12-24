@@ -15,8 +15,15 @@ import java.util.List;
 @Table(name = "listings")
 public class Listing {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "listing_gen"
+    )
+    @SequenceGenerator(
+            name = "listing_gen",
+            sequenceName = "listing_seq",
+            allocationSize = 1
+    )
     private Long id;
     private String titleOrDescription; //название или описание
     private String photos;
